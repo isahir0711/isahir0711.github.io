@@ -1,1 +1,263 @@
-styles
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Condensed&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background: rgb(14, 17, 17);
+    color: #ffff;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+/*nav bar section*/
+.name-home {
+    text-decoration: none;
+    color: #ffff;
+    align-self: center;
+    margin-left: 1.5em;
+}
+
+.links>li {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffff;
+    margin-right: 15px;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 1em;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*-----------------------------------*/
+
+
+/*Presentation styles*/
+.presentation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    padding: 1.3em;
+}
+
+
+.message {
+    font-size: 2.3em;
+}
+
+.messages {
+    width: 50%;
+}
+
+.png-me {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.png-me:hover {
+    filter: none;
+}
+
+/*-----------------------------------*/
+
+/*abilities section*/
+.tech{
+    text-align: center;
+    margin: 1em;
+}
+
+.icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.icon{
+    height: 120px;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    translate: 0 -10%;
+    cursor: pointer;
+}
+
+/*-----------------------------------*/
+
+/*projects section*/
+.projects{
+    margin-top: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.projects-title{
+    flex-basis: 100%;
+}
+
+.project{
+    margin: 10px;
+    padding: 10px;
+    flex-basis: 300px;
+    background: #4F4F4F;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.project:hover{
+    translate: 0 -3%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.project-img{
+    height: 170px;
+}
+
+/*-----------------------------------*/
+
+/*form contact*/
+.contact{
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.contact-data{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.contact-form{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
+
+.form-input{
+    padding: 8px;
+    font-size: 16px;
+}
+.form-group{
+    text-align: left;
+}
+
+textarea{
+    resize: none;
+}
+
+/*-----------------------------------*/
+
+/*footer section*/
+.footer{
+    background: rgb(35,43,43);
+    flex-shrink: 0;
+    text-align: center;
+}
+
+
+.footer-content>.linkedln-link{
+    color: #ffff;
+}
+
+
+/*-----------------------------------*/
+
+/*Media querys section*/
+@media only screen and (max-width: 600px) {
+    .messages {
+        width: 100%;
+    }
+
+    .presentation {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .messages {
+        width: 100%;
+    }
+
+    .presentation {
+        justify-content: space-evenly;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    body{
+        background: #F9F5F6;
+        color: rgb(14, 17, 17);
+    }
+
+    .presentation{
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    }
+
+    .name-home{
+        color: rgb(14, 17, 17);
+    }
+
+    .link{
+        color: rgb(14, 17, 17);
+    }
+
+    .footer{ 
+        background: #F8E8EE;
+    }
+
+    .footer-content>.linkedln-link{
+        color: rgb(14, 17, 17);
+    }
+
+    .project{
+        background: #F8E8EE;
+    }
+
+    .png-me{
+        filter: none;
+    }
+}
