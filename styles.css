@@ -25,12 +25,14 @@ main{
     --color-secondary: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);;
     --color-accent: #4F4F4F;
     --font-color: #ffff;
+    --hover-color: #4F4F4F;
   }
   .theme-light {
     --color-primary: #F9F5F6;
     --color-secondary: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     --color-accent: #F8E8EE;
     --font-color: rgb(14, 17, 17);
+    --hover-color: #b6e2f7;
   }
 
 
@@ -66,6 +68,10 @@ main{
     align-items: center;
 }
 
+.link:hover{
+    color: var(--hover-color);
+}
+
 /*-----------------------------------*/
 
 
@@ -77,6 +83,7 @@ main{
     justify-content: space-around;
     background: var(--color-secondary);
     padding: 1.3em;
+    margin-bottom: 50px;
 }
 
 
@@ -89,33 +96,40 @@ main{
 }
 
 .png-me {
-    transition: 0.5s;
     border-radius: 50%;
 }
 
-.png-me:hover {
-    translate: 0 -3%;
-    filter: drop-shadow(5px 5px 5px #222);
+
+.social-link{
+    text-decoration: none;
+    color:  var(--font-color);
+    font-size: 1.5em;
+}
+.social-link:hover{
+    color: var(--hover-color);
 }
 
 /*-----------------------------------*/
 
 /*abilities section*/
 .tech{
-    text-align: center;
-    margin: 1em;
+    text-align: left;
+    padding: 1.3em;
+}
+
+.tech>h2{
+    padding-left: 2em;
 }
 
 .icons-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
     justify-content: space-evenly;
-    padding: 50px;
+    padding: 25px;
 }
-
 .icon{
-    height: 120px;
+    height: 95px;
     transition: 0.5s;
 }
 
@@ -212,11 +226,6 @@ textarea{
 }
 
 
-.footer-content>.linkedln-link{
-    text-decoration: none;
-    color: #ffff;
-    font-size: 1.5em;
-}
 /*-----------------------------------*/
 
 /*change theme section*/
