@@ -34,3 +34,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
         document.getElementById('slider').checked = true;
     }
 });
+
+menu = document.querySelector(".menu");
+
+menu.onclick = function(){
+    nav = document.querySelector(".navbar");
+    nav.classList.toggle("active");
+}
