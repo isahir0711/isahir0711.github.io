@@ -353,7 +353,7 @@ main{
         width: 100vw;
         transition: 0.2s;
         background: transparent;
-        backdrop-filter: blur(70px);
+        backdrop-filter: blur(100px);
     }
 
     .navbar>.links{
@@ -362,10 +362,13 @@ main{
         justify-content: flex-start;
         align-items: flex-start;
         opacity: 0;
-        padding: 0;    
+        padding: 0;   
+        transition: 0.2s; 
     }
 
     .navbar.active{
+        /*aqui podemos establecer que no cubra toda la pantalla*/
+        /*width: 80%;*/
         height: 100vh;
     }
     .navbar.active>.links{
