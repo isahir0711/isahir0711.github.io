@@ -352,8 +352,7 @@ main{
         top: 50px;
         width: 100vw;
         transition: 0.2s;
-        background: transparent;
-        backdrop-filter: blur(100px);
+        background: var(--button-background);
     }
 
     .navbar>.links{
