@@ -27,6 +27,7 @@ main{
     --font-color: #ffff;
     --hover-color: #4F4F4F;
     --button-background:#1a293a;
+    --project-border:#1b3c62;
   }
   .theme-light {
     --color-primary: #F9F5F6;
@@ -35,6 +36,7 @@ main{
     --font-color: rgb(14, 17, 17);
     --hover-color: #b6e2f7;
     --button-background:#b5e1f7;
+    --project-border:#b3e1f8;
   }
 
 
@@ -92,11 +94,10 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background: var(--color-secondary);
     padding: 1.3em;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 
@@ -126,11 +127,9 @@ main{
 .tech{
     text-align: left;
     padding: 1.3em;
+    margin-inline: 10%;
 }
 
-.tech>.titles{
-    padding-left: 2em;
-}
 
 .icons-container{
     display: flex;
@@ -146,7 +145,6 @@ main{
 
 .icon:hover{
     translate: 0 -10%;
-    cursor: pointer;
 }
 
 /*-----------------------------------*/
@@ -158,6 +156,11 @@ main{
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn:hover{
+    background: var(--color-accent);
 }
 
 
@@ -168,10 +171,12 @@ main{
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
+    /*background: var(--button-background);*/
 }
 
 .projects-title{
     flex-basis: 100%;
+    margin-bottom: 50px;
 }
 
 .project{
@@ -180,13 +185,26 @@ main{
     margin: 10px;
     padding: 20px;
     flex-basis: 300px;
-    background: var(--color-accent);
+    border: 2.5px solid var(--project-border);
     border-radius: 20px;
-    transition: 0.5s;
 }
 
 .project-img{
     height: 170px;
+    margin-bottom: 25px;
+}
+
+.project-title{
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.project-tech{
+    width: 35px;
+}
+
+.project>.btn{
+    margin-top: 55px;
 }
 
 /*-----------------------------------*/
@@ -218,6 +236,8 @@ main{
     /*background: var(--color-accent);*/
     flex-shrink: 0;
     text-align: center;
+    padding: 20px;
+    background: var(--button-background);
 }
 
 
@@ -337,6 +357,9 @@ main{
 
 /*Media querys section*/
 @media only screen and (max-width: 600px) {
+    .tech{
+        margin-inline: 0;
+    }
     .messages {
         width: 100%;
     }
@@ -350,8 +373,8 @@ main{
         height: 0;
         position: absolute;
         top: 50px;
-        width: 100vw;
         transition: 0.2s;
+        width: 100vw;
         background: var(--button-background);
     }
 
